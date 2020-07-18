@@ -15,6 +15,7 @@ function generatePassword(){
   var infoCriteria = ["Upper_Case", "Lower_case", "Numbers","Special_Characters"];
   var criteria = [0,0,0,0];
   
+  //lenghtOfPassword = prompt("How Lenght do you want your PASSWORD?"); 
   
   if(document.getElementById("check1").checked==false && document.getElementById("check2").checked==false && document.getElementById("check3").checked==false && document.getElementById("check4").checked==false )
     return  "NO CRITERIA SELECTED";
@@ -104,8 +105,11 @@ function generatePassword(){
 }
 
 
-var lenghtOfPassword = prompt("How Lenght do you want your PASSWORD?"); 
+var lenghtOfPassword;
+do{
+  lenghtOfPassword = prompt("How Long do you want your PASSWORD?");
   
+}while(isNaN(parseInt(lenghtOfPassword)) || parseInt(lenghtOfPassword) <1);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
