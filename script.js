@@ -9,7 +9,6 @@ function writePassword() {
 
 }
 
-
 function generatePassword(){
   var tempPassword =[""];
   var infoCriteria = ["Upper_Case", "Lower_case", "Numbers","Special_Characters"];
@@ -20,7 +19,6 @@ function generatePassword(){
   if(document.getElementById("check1").checked==false && document.getElementById("check2").checked==false && document.getElementById("check3").checked==false && document.getElementById("check4").checked==false )
     return  "NO CRITERIA SELECTED";
 
-
   if(document.getElementById("check1").checked==true )
     criteria[0] = 1;
   
@@ -30,10 +28,9 @@ function generatePassword(){
   if(document.getElementById("check3").checked==true )
     criteria[2] = 1;
 
-    if(document.getElementById("check4").checked==true )
+  if(document.getElementById("check4").checked==true )
     criteria[3] = 1;
 
-   
   var i;
   var randomOption;
   var addToPass;
@@ -46,7 +43,6 @@ function generatePassword(){
       randomOption = Math.round(Math.random()*3);
     }
 
- 
     switch(randomOption){
       case 0:
         addToPass = "uppperCase";
@@ -69,7 +65,6 @@ function generatePassword(){
       break;
     } ;
 
-
     if(addToPass == "uppperCase"){
       var randomUpper= Math.round(Math.random()*25);
       randomUpper = randomUpper + 65;
@@ -90,7 +85,6 @@ function generatePassword(){
       randomSpecial = randomSpecial + 33;
       tempPassword [i] = String.fromCharCode(randomSpecial); 
     }
-
 
 
   }  
