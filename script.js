@@ -38,7 +38,7 @@ function generatePassword(){
   var randomOption;
   var addToPass;
 
-  for(i=0 ; i<=lenghtOfPassword; i++){
+  for(i=0 ; i<lenghtOfPassword; i++){
    
     randomOption = Math.round(Math.random()*3);
 
