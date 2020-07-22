@@ -15,3 +15,5 @@ a random character based in the criteria, more options selected in the criteria 
 be able to choose.
 
 ![main image](/main.PNG)
+
+![allcriteria image](/allcriteria.PNG)
