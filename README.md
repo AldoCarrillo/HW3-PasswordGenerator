@@ -14,4 +14,4 @@ how my program works is take the lenght of the desired password, create an array
 a random character based in the criteria, more options selected in the criteria more options the random is gonna
 be able to choose.
 
-![main image](/main.png)
+![main image](/main.PNG)
