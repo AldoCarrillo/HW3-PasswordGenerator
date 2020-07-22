@@ -6,19 +6,18 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 
 function generatePassword(){
-  var tempPassword =[""];
-  var infoCriteria = ["Upper_Case", "Lower_case", "Numbers","Special_Characters"];
-  var criteria = [0,0,0,0];
+  var tempPassword =[""]; // this is the value is going to be return to the fucntion
+  var infoCriteria = ["Upper_Case", "Lower_case", "Numbers","Special_Characters"]; // array to choose the criteria
+  var criteria = [0,0,0,0]; // array to choose random which charactrer is gonna be add to the password array
   
-  //lenghtOfPassword = prompt("How Lenght do you want your PASSWORD?"); 
-  
+  // validation to mak make sure at least 1 opctions of the criteria is be selected  
   if(document.getElementById("check1").checked==false && document.getElementById("check2").checked==false && document.getElementById("check3").checked==false && document.getElementById("check4").checked==false )
     return  "NO CRITERIA SELECTED";
 
+    //check which type of characteres are going to be add to the pass 
   if(document.getElementById("check1").checked==true )
     criteria[0] = 1;
   
@@ -35,14 +34,15 @@ function generatePassword(){
   var randomOption;
   var addToPass;
 
+  //loop to generate the pass from 0 to the lengt selected by the user
   for(i=0 ; i<lenghtOfPassword; i++){
    
     randomOption = Math.round(Math.random()*3);
-
+    //check which checkboxed were selected by the user
     while(criteria[randomOption]== 0){
       randomOption = Math.round(Math.random()*3);
     }
-
+    //switch to choose the random char
     switch(randomOption){
       case 0:
         addToPass = "uppperCase";
@@ -64,7 +64,7 @@ function generatePassword(){
 
       break;
     } ;
-
+    //check what type of character are going to be add to the password array and add it
     if(addToPass == "uppperCase"){
       var randomUpper= Math.round(Math.random()*25);
       randomUpper = randomUpper + 65;
@@ -89,7 +89,7 @@ function generatePassword(){
 
   }  
 
-
+//clone temporal password to the return value
   var passwordToReturn="";
   for(i=0;i<tempPassword.length;i++){
     passwordToReturn = passwordToReturn + tempPassword[i];
@@ -99,6 +99,7 @@ function generatePassword(){
 }
 
 
+//validation for the input only nmumber are accepted
 var lenghtOfPassword;
 do{
   lenghtOfPassword = prompt("How Long do you want your PASSWORD?");
