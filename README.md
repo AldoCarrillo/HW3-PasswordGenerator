@@ -13,3 +13,5 @@ last step is click the button "generate password" to generate in a textbox area 
 how my program works is take the lenght of the desired password, create an array of that size and star choosing 
 a random character based in the criteria, more options selected in the criteria more options the random is gonna
 be able to choose.
+
+![main image](/screenshots/main.png)
